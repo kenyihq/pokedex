@@ -23,6 +23,7 @@ main {
 
 .window {
     background: #fff;
+    border-radius: 1em;
 }
 
 input {
