@@ -4,20 +4,10 @@ async function getPokemon(id) {
     return data;
 }
 
-async function init() {
-    const firstPokemon = await getPokemon(150);
-    updatePokemon(firstPokemon);
-
-}
-
-init();
-
 function updatePokemon(pokemon) {
     window.photo.setAttribute('src', pokemon.sprites.front_default);
     window.pokemon.textContent = pokemon.name;    
 }
-
-
 
 window.searchPokemon.addEventListener('change', async () => {
     const pokemon = await getPokemon(window.searchPokemon.value);
