@@ -6,10 +6,20 @@ async function getPokemon(id) {
 
 async function init() {
     const firstPokemon = await getPokemon(150);
+    updatePokemon(firstPokemon);
 
-    window.pokemon.textContent = firstPokemon.name;
-    
-    window.photo.setAttribute('src', firstPokemon.sprites.front_default);
 }
 
 init();
+
+function updatePokemon(pokemon) {
+    window.photo.setAttribute('src', pokemon.sprites.front_default);
+    window.pokemon.textContent = pokemon.name;    
+}
+
+
+
+window.searchPokemon.addEventListener('change', async () => {
+    const pokemon = await getPokemon(window.searchPokemon.value);
+    updatePokemon(pokemon);
+})

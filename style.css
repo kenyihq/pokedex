@@ -19,3 +19,17 @@ main {
 #pokemon::first-letter{
     text-transform: uppercase;
 }
+
+.window {
+    background: #fff;
+}
+
+input {
+    margin-top: 1em;
+    width: 100%;
+    border: none;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 1em;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+}
